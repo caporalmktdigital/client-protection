@@ -24,6 +24,8 @@ This plugin hides all of the options from the WordPress admin menu, any update n
 
 Client protection helps you to keep your development and custom configuration safe and simply for your clients so they can focus on what they need to create and manage content.
 
+Official page in brazilian portuguese: https://caporalmktdigital.com.br/plataformas/plugin-client-protection/
+
 Functions Hidden:
 - Divi Theme Options
 - Extra Theme Options

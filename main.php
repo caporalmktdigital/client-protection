@@ -4,7 +4,7 @@
 Plugin Name: Client Protection
 Plugin URI: http://caporalmktdigital.com.br/
 Description: Protect the main configuration of your website, keep it simple for clients. One click of effectiveness! 
-Version: 1.0
+Version: 1.2
 Author: Alexandre Caporal
 Author URI: https://caporalmktdigital.com.br/
 */

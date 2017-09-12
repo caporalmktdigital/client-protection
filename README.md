@@ -10,6 +10,8 @@ Tested up to: 4.8.1
 
 Stable tag: 1.2
 
+Current version: 1.2
+
 License: GPLv2
 
 License URI: https://www.gnu.org/licenses/gpl-2.0.html

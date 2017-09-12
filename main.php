@@ -4,13 +4,13 @@
 Plugin Name: Client Protection
 Plugin URI: https://caporalmktdigital.com.br/plataformas/plugin-client-protection/
 Description: Protect the main configuration of your website, keep it simple for clients. One click of effectiveness! 
-Version: 1.2
+Version: 1.3
 Author: Alexandre Caporal
 Author URI: https://caporalmktdigital.com.br/
 */
 
-add_action( 'init', 'github_plugin_updater' );
-function github_plugin_updater() {
+add_action( 'init', 'cp_updater' );
+function cp_updater() {
 	include_once 'updater.php';
 	define( 'WP_GITHUB_FORCE_UPDATE', true );
 

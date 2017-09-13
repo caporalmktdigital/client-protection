@@ -8,9 +8,9 @@ Requires at least: 4.7
 
 Tested up to: 4.8.1
 
-Stable tag: 1.3
+Stable tag: 1.4
 
-Current version: 1.3
+Current version: 1.4
 
 License: GPLv2
 

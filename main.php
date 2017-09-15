@@ -4,7 +4,7 @@
 Plugin Name: Client Protection
 Plugin URI: https://caporalmktdigital.com.br/plataformas/plugin-client-protection/
 Description: Protect the main configuration of your website, keep it simple for clients. One click of effectiveness! 
-Version: 1.4
+Version: 1.5
 Author: Alexandre Caporal
 Author URI: https://caporalmktdigital.com.br/
 */
@@ -79,6 +79,8 @@ function agcap_remove_menus () {
         remove_submenu_page( 'wysija_premium' ); // Mailpoet premium
         remove_submenu_page( 'wysija_mp3' ); // Mailpoet Anuncio
     remove_menu_page('edit.php?post_type=popup'); // Popup Maker
+	remove_submenu_page('wc-settings'); // Configurações Woocommerce
+    remove_menu_page('caldera-forms'); // Caldera Forms
        global $submenu;
         // Appearance Menu
         unset($submenu['themes.php'][6]); // Customize

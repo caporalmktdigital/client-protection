@@ -4,34 +4,10 @@
 Plugin Name: Client Protection
 Plugin URI: https://caporalmktdigital.com.br/plataformas/plugin-client-protection/
 Description: Protect the main configuration of your website, keep it simple for clients. One click of effectiveness! 
-Version: 1.5
+Version: 1.6
 Author: Alexandre Caporal
 Author URI: https://caporalmktdigital.com.br/
 */
-
-add_action( 'init', 'cp_updater' );
-function cp_updater() {
-	include_once 'updater.php';
-	define( 'WP_GITHUB_FORCE_UPDATE', true );
-
-if (is_admin()) { // note the use of is_admin() to double check that this is happening in the admin
-	$config = array(
-		'slug' => plugin_basename(__FILE__), // this is the slug of your plugin
-		'proper_folder_name' => 'plugin-name', // this is the name of the folder your plugin lives in
-		'api_url' => 'https://api.github.com/repos/caporalmktdigital/client-protection', // the GitHub API url of your GitHub repo
-		'raw_url' => 'https://raw.github.com/caporalmktdigital/client-protection/master', // the GitHub raw url of your GitHub repo
-		'github_url' => 'https://github.com/caporalmktdigital/client-protection', // the GitHub url of your GitHub repo
-		'zip_url' => 'https://github.com/caporalmktdigital/client-protection/zipball/master', // the zip url of the GitHub repo
-		'sslverify' => true, // whether WP should check the validity of the SSL cert when getting an update, see https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/2 and https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/4 for details
-		'requires' => '3.0', // which version of WordPress does your plugin require?
-		'tested' => '3.3', // which version of WordPress is your plugin tested up to?
-		'readme' => 'README.md', // which file to use as the readme for the version number
-		'access_token' => '', // Access private repositories by authorizing under Appearance > GitHub Updates when this example plugin is installed
-	);
-	new WP_GitHub_Updater($config);
-}
-
-}
 
 /* --------- Remove themes, plugins and WordPress updates ----------- */
 
@@ -45,6 +21,7 @@ add_filter('pre_site_transient_update_themes','remove_core_updates');
 /* --------- Remove custom and dangerous plugins menu tabs ----------- */
 function agcap_remove_menus () {
     remove_menu_page('plugins.php'); // Plugins
+    remove_menu_page('project'); // Projetos
     remove_menu_page('options-general.php'); // Settings
     remove_menu_page('DiviModuleEditor'); // Divi Module Editor
     remove_menu_page('tools.php'); // Tools
@@ -81,6 +58,15 @@ function agcap_remove_menus () {
     remove_menu_page('edit.php?post_type=popup'); // Popup Maker
 	remove_submenu_page('wc-settings'); // Configurações Woocommerce
     remove_menu_page('caldera-forms'); // Caldera Forms
+    remove_menu_page('FB-comments'); // Facebook Comments
+    remove_menu_page('userpro'); // User Pro
+    remove_menu_page('quadmenu_welcome'); // Quadmenu
+    remove_menu_page('du_admin_home'); // Divi Cloud
+    remove_menu_page('nxssnap'); // NXS Snap
+    remove_menu_page('lscache-dash'); // Litespeed Cache
+    remove_menu_page('related-posts-thumbnails'); // Related Posts
+    remove_submenu_page( 'wp_quiz', 'wp_quiz_config' ); // WP Quiz Pro Config
+    remove_submenu_page( 'wp_quiz', 'wp_quiz_support' ); // WP Quiz Pro Support
        global $submenu;
         // Appearance Menu
         unset($submenu['themes.php'][6]); // Customize
